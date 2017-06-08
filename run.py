@@ -21,11 +21,11 @@ def write(variable):
 	os.system("new value written to file")
 	return "value [ %s ] saved to file" % variable
 	
-#@app.route("/f/")
-#def filelist():
-#	cmd = "ls"
-#	data = subprocess.check_output(cmd)
-#	return "%s" % data
+@app.route("/f/")
+def filelist():
+	cmd = "ls"
+	data = subprocess.check_output(cmd)
+	return "%s" % data
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
